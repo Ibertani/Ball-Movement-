@@ -1,0 +1,62 @@
+
+<html>
+
+<body></body>
+<script src = "C:\Users\isabela\Desktop\coding\bootcampfiles\moveballexercise\magic.js" ></script>
+
+<script> 
+
+var positionX = 0;
+var positionY = 0;
+var velocityX = 10;
+var velocityY = 10;
+
+
+function moveBall() {
+ 
+      var Xmin = 0;
+      var Ymin = 0;
+      var Xmax = window.innerWidth; 
+      var Ymax = window.innerHeight;
+      
+      if ((positionX +50) >= Xmax ) {
+         velocityX = - velocityX;
+      }
+      if ((positionY +50) >= Ymax ) {
+         velocityY = - velocityY;
+      }
+      if ((positionX+ 10) <= Xmin ) {
+         velocityX = - velocityX;
+      }
+      if ((positionY + 10) <= Ymin ) {
+         velocityY = - velocityY;
+      }
+
+
+       
+      
+      positionX= positionX + velocityX;
+      positionY= positionY + velocityY;
+
+
+      ball.style.left = positionX +'px';
+      ball.style.top = positionY + 'px';
+
+
+
+      
+      
+
+  
+ }
+
+create();
+setInterval(moveBall, 100);
+
+</script>
+
+</html>
+
+
+
+
